@@ -156,7 +156,7 @@ body {
 
 .slider {
     /* slider */
-    --slider-index: 1.5;
+    --slider-index: 1;
     margin-top: 1rem;
     height: 100%;
     max-height: 60vh;
@@ -187,6 +187,7 @@ body {
     transform: scale(1.1);
     
     
+    
 }
 
 .handle {
@@ -215,6 +216,7 @@ body {
 
 .album-links {
     width: 95vw;
+     
     height: 60%;
     display: flex;
     justify-content: center;
@@ -231,6 +233,8 @@ body {
     gap: 2.5rem;
     flex-wrap: wrap;
     width: 75vw;
+    min-width:450px;
+    max-width: 825px;
 }
 
 
@@ -313,5 +317,13 @@ body {
     color: #b1b1b1  ;
     font-size: 1.2rem;
 
+
+}
+
+@media screen and (max-width: 700px){
+    html {
+
+    font-size: 10px;
+}
 
 }
