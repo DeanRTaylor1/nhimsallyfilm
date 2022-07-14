@@ -1,3 +1,9 @@
+:root {
+    --slider-padding: 5rem;
+}
+
+
+
 html {
     font-size: 12px;
 
@@ -132,9 +138,67 @@ body {
 
 .main {
     height: 90%;
-    width: 100vw;
+    width: 95vw;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    align-items: center;
+    overflow: hidden;
+
+
+}
+
+.slider { /* slider */
+--slider-index: 0;
+margin-top: 1rem;
+height: 100%;
+width: calc(100% - 2 * var(--slider-padding));
+display: flex;
+padding: 0;
+flex-wrap: nowrap;
+transform: translateX(calc(var(--slider-index) * -100%));
+transition: 750ms ease-in-out;
+
+
+
+}
+
+.slider > img{
+    width: auto;
+    height: 100%;
+    padding: 0;
+    flex: 0, 0, 25%;
+    max-width: 40%;
+}
+
+.handle {
+    margin-top: 1rem;
+    height: 10%;
+    width: var(--slider-padding);
+    background-color: rgba(236,235,240, 0.25);
+    z-index: 10;
+    border: none;
+    border-radius: 4px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    transition: 500ms ease-in-out;
+
+}
+
+
+
+.handle:hover,
+.handle:focus {
+    cursor: pointer;
+    background-color: rgba(236,235,240, 0.7);
+    font-size: 1.3rem;
 }
