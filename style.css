@@ -1,0 +1,65 @@
+html {
+    font-size: 12px;
+
+
+}
+
+
+body {
+    background-color: beige;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    font-family: 'Abel';
+    
+}
+
+
+.header {
+    height: 5%;
+    width: 95vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+    padding-top: 0.75rem;
+    
+}
+
+.header-left{
+font-size: 2rem;
+padding-left: 2rem;
+}
+.header-right{
+    
+    font-size: 1.75rem;
+    padding-right: 2rem;
+    }
+
+.header-right ul{
+    list-style-type: none;
+    display: flex;
+    gap: 5rem;
+
+    }
+
+
+.header-right ul li{            
+    display: inline;
+    
+    
+    
+    
+    }
+    
+
+.main {
+    height: 90%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
