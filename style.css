@@ -150,6 +150,7 @@ body {
     align-items: center;
     overflow-x: hidden;
     overflow-y:visible;
+    
 
 
 }
@@ -174,8 +175,9 @@ body {
     height: 100%;
     padding: 0;
     flex: 0, 0, 25%;
-    max-width: 40%;
+    
     transition: transform .5s;
+    
 }
 
 .slider>img:hover {
@@ -322,7 +324,7 @@ body {
     font-size: 10px;
 }
 
-}
+
 
 .gallery {
     display: flex;
@@ -358,4 +360,6 @@ body {
     flex: 0, 0, 50%;
     max-width: 75%;
     transition: transform .5s;
+}
+
 }
