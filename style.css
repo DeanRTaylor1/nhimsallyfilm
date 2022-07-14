@@ -332,7 +332,7 @@ body {
     width: 100vw;
     align-items: center;
     overflow-x: hidden;
-    overflow-y:visible;
+    overflow-y:hidden;
     height: 100%;
 
 
@@ -361,6 +361,31 @@ body {
     max-width: 75%;
     transition: transform .5s;
     min-width: 260px;
+}
+
+.handle {
+    margin-top: 1rem;
+    height: 25%;
+    width: var(--slider-padding);
+    background-color: rgba(236, 235, 240, 0.5);
+    z-index: 10;
+    border: none;
+    border-radius: 4px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    transition: 100ms ease-in-out;
+    font-size: 3rem;
+
+}
+
+
+
+.handle:hover,
+.handle:focus {
+    cursor: pointer;
+    background-color: rgba(236, 235, 240, 0.7);
+    font-size: 3rem;
 }
 
 }
