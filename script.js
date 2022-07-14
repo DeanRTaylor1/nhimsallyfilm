@@ -4,7 +4,7 @@ let nsliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-
     )*/
 let indexValue = 1;
 let width = window.innerWidth;
-console.log(width);
+console.log(width < 551);
   
 
 document.addEventListener("click", e => {
