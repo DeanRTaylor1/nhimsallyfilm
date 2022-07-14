@@ -1,3 +1,10 @@
+/*const leftHandle = document.querySelectorAll(".handle left-handle")
+const nslider =  handle.closest(".gallery").querySelector(".slider");
+let nsliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index")
+    )*/
+let indexValue = 1.5;
+  
+
 document.addEventListener("click", e => {
     let handle;
     if (e.target.matches("handle")){
@@ -11,13 +18,30 @@ function onHandleClick(handle) {
     const slider =  handle.closest(".gallery").querySelector(".slider");
     let sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index")
     )
-    let newSliderIndexLeft = sliderIndex - 0.25;
-    let newSliderIndexRight = sliderIndex + 0.25;
-    if (handle.classList.contains("left-handle")) {
-        slider.style.setProperty("--slider-index", newSliderIndexLeft)
-    }
-    if (handle.classList.contains("right-handle")) {
-        slider.style.setProperty("--slider-index", newSliderIndexRight)
-    }
     
+
+    console.log("current slider index" + sliderIndex);
+
+    let newSliderIndexLeft = indexValue - 0.25;
+
+    let newSliderIndexRight = indexValue + 0.25;
+
+    console.log(indexValue, newSliderIndexLeft ,newSliderIndexLeft );
+    if (handle.classList.contains("left-handle") && indexValue > 0.25) {
+        slider.style.setProperty("--slider-index", newSliderIndexLeft)
+        indexValue -= 0.25;
+    }
+    if (handle.classList.contains("right-handle") && indexValue < 3) {
+        slider.style.setProperty("--slider-index", newSliderIndexRight)
+        indexValue += 0.25;
+
+    } if(handle.classList.contains("right-handle") && indexValue === 2.5){
+        slider.style.setProperty("--slider-index", 1.5)
+        indexValue = 1.5;
+        
+    }if(handle.classList.contains("left-handle") && indexValue === 0.25){
+        slider.style.setProperty("--slider-index", 1.25)
+        indexValue = 1.25;}
+        else {return;}
+
 }

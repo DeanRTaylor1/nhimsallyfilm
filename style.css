@@ -157,15 +157,18 @@ body {
 }
 
 .slider { /* slider */
---slider-index: 0;
+--slider-index: 1.5;
 margin-top: 1rem;
 height: 100%;
+max-height: 60vh;
+
 width: calc(100% - 2 * var(--slider-padding));
 display: flex;
 padding: 0;
 flex-wrap: nowrap;
 transform: translateX(calc(var(--slider-index) * -100%));
-transition: 750ms ease-in-out;
+transition: 700ms ease-in-out;
+transition-delay: 150ms;
 
 
 
@@ -190,7 +193,7 @@ transition: 750ms ease-in-out;
     margin-left: 1rem;
     margin-right: 1rem;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    transition: 500ms ease-in-out;
+    transition: 100ms ease-in-out;
 
 }
 
