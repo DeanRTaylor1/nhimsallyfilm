@@ -349,7 +349,7 @@ body {
     padding: 0;
     flex-wrap: nowrap;
     transform: translateX(calc(var(--slider-index) * -100%));
-    transition: 700ms ease-in-out;
+    transition: 30000ms;
     transition-delay: 150ms;
 }
 
@@ -360,6 +360,7 @@ body {
     flex: 0, 0, 50%;
     max-width: 75%;
     transition: transform .5s;
+    min-width: 260px;
 }
 
 }

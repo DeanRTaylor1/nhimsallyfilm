@@ -3,6 +3,8 @@ const nslider =  handle.closest(".gallery").querySelector(".slider");
 let nsliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index")
     )*/
 let indexValue = 1;
+let width = window.innerWidth;
+console.log(width);
   
 
 document.addEventListener("click", e => {
@@ -27,6 +29,13 @@ function onHandleClick(handle) {
     let newSliderIndexRight = indexValue + 0.25;
 
     console.log(indexValue, newSliderIndexLeft ,newSliderIndexLeft );
+    if (handle.classList.contains("left-handle") && width < 551) {
+        slider.style.setProperty("--slider-index", -5)        
+    }
+    if (handle.classList.contains("right-handle") && width < 551) {
+        slider.style.setProperty("--slider-index", 5)        
+    }
+
     if (handle.classList.contains("left-handle") && indexValue > -0.25) {
         slider.style.setProperty("--slider-index", newSliderIndexLeft)
         indexValue -= 0.25;
