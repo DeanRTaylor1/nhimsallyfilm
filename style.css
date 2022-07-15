@@ -15,7 +15,7 @@ html {
 }
 
 .hamburger {
-    display:none;
+    display: none;
 }
 
 a {
@@ -73,6 +73,46 @@ body {
 
 .header-right ul li {
     display: inline;
+
+}
+
+.grid {
+    display: grid;
+    width: 95vw;
+    height: 100%;
+}
+
+.grid-element {
+
+    margin: 1rem;    
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    
+
+}
+.personalmain {
+    height: 50%;
+   
+}
+
+.grid-element img {
+    height: 40%;
+    opacity: 1;
+    
+    position: absolute;
+    aspect-ratio: 2/3;
+    
+
+}
+
+.grid-element img:hover {
+    opacity: 30%;
+    
 
 }
 
@@ -153,10 +193,10 @@ body {
 
 #contactmain {
     background-image: url(images/contactpagebgimage1.jpg);
-    background-size:cover;
+    background-size: cover;
     overflow: hidden;
     height: 90%;
-    
+
 }
 
 .contact-card {
@@ -168,22 +208,25 @@ body {
     align-items: flex-start;
     padding-left: 5rem;
     margin-bottom: 2rem;
-    
+
 }
 
-.contact-1, .contact-2, .contact-3, .contact-4 {
+.contact-1,
+.contact-2,
+.contact-3,
+.contact-4 {
     height: 75px;
 }
 
- .contact-5 {
+.contact-5 {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     gap: 1rem;
 }
 
-h2{
-    color: rgba(255,255,255, 1);
+h2 {
+    color: rgba(255, 255, 255, 1);
     font-weight: 400;
     font-size: 3.5rem;
     text-decoration: underline;
@@ -198,29 +241,30 @@ h2{
 
 }
 
-h2:hover, h2:focus{
-    cursor:pointer;
-    color: rgba(255,255,255, 0.7);
+h2:hover,
+h2:focus {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
     transform: scale(1.1);
 
 
 }
 
-h3{
-    color: rgba(255,255,255, 1);
+h3 {
+    color: rgba(255, 255, 255, 1);
     font-weight: 400;
     font-size: 3.5rem;
     margin: 0px;
-    
+
 
 }
 
-h4{
-    color: rgba(255,255,255, 1);
+h4 {
+    color: rgba(255, 255, 255, 1);
     font-weight: 400;
     font-size: 2rem;
     margin: 0px;
-    
+
 
 }
 
@@ -241,8 +285,8 @@ h4{
     width: 100vw;
     align-items: center;
     overflow-x: hidden;
-    overflow-y:hidden;
-    
+    overflow-y: hidden;
+
 
 
 }
@@ -267,17 +311,17 @@ h4{
     height: 100%;
     padding: 0;
     flex: 0, 0, 25%;
-    
+
     transition: transform .5s;
-    
+
 }
 
 .slider>img:hover {
     cursor: pointer;
     transform: scale(1.1);
-    
-    
-    
+
+
+
 }
 
 .handle {
@@ -306,7 +350,7 @@ h4{
 
 .album-links {
     width: 95vw;
-     
+
     height: 60%;
     display: flex;
     justify-content: center;
@@ -323,7 +367,7 @@ h4{
     gap: 2.5rem;
     flex-wrap: wrap;
     width: 75vw;
-    min-width:450px;
+    min-width: 450px;
     max-width: 825px;
 }
 
@@ -333,7 +377,7 @@ h4{
     gap: 1rem;
     height: 200px;
     font-size: 2rem;
-    
+
 }
 
 .album-link-container {
@@ -396,7 +440,7 @@ h4{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 
 
 }
@@ -406,12 +450,13 @@ h4{
     font-size: 1rem;
     padding-right: 2rem;
     padding-left: 2rem;
-    padding-top: 0.5rem;    
+    padding-top: 0.5rem;
 
 
 }
+
 .footer-right a:hover {
-    color: #b1b1b1  ;
+    color: #b1b1b1;
     font-size: 1.2rem;
 
 
@@ -446,164 +491,164 @@ iframe {
 
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     html {
 
-    font-size: 10px;
+        font-size: 10px;
+    }
+
+
+
+    .gallery {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        align-items: center;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 100%;
+
+
+    }
+
+    .slider {
+        /* slider */
+        --slider-index: 1;
+        margin-top: 1rem;
+        height: 100%;
+        max-height: 100vh;
+        width: calc(100% - 2 * var(--slider-padding));
+        display: flex;
+        padding: 0;
+        flex-wrap: nowrap;
+        transform: translateX(calc(var(--slider-index) * -100%));
+        transition: 30000ms;
+        transition-delay: 150ms;
+    }
+
+    .slider>img {
+        width: auto;
+        height: 100%;
+        padding: 0;
+        flex: 0, 0, 50%;
+        max-width: 75%;
+        transition: transform .5s;
+        min-width: 260px;
+    }
+
+    .handle {
+        margin-top: 1rem;
+        height: 25%;
+        width: var(--slider-padding);
+        background-color: rgba(236, 235, 240, 0.5);
+        z-index: 10;
+        border: none;
+        border-radius: 4px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        transition: 100ms ease-in-out;
+        font-size: 3rem;
+
+    }
+
+
+
+    .handle:hover,
+    .handle:focus {
+        cursor: pointer;
+        background-color: rgba(236, 235, 240, 0.7);
+        font-size: 3rem;
+    }
+
+    .dropdown:hover .albums-content {
+        display: none;
+    }
+
+    .footer {
+        width: 95vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        margin-top: 8rem;
+
+    }
+
+    /* trying to create hamburger for small screens */
+
+    .header-right {
+
+        font-size: 1.75rem;
+        padding: 0;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 400px;
+
+
+
+    }
+
+    .header {
+
+        padding-right: 0px;
+
+    }
+
+    .header-right ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        z-index: 998;
+        margin-top: 35rem;
+        background-color: rgba(236, 235, 240, 0.7);
+        border-radius: 4px;
+        gap: 1rem;
+
+
+
+
+    }
+
+    .header-right ul li {
+
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+
+
+
+
+    }
+
+    .navlarge {
+        display: none;
+
+    }
+
+    .navsmall {
+        display: none;
+        opacity: 0;
+        width: 100%;
+        margin-left: 1.5rem;
+        padding-left: 2rem;
+        margin-bottom: 5rem;
+        transition: opacity 5000ms ease-in-out;
+
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        z-index: 999;
+    }
+
+    .hamburger:hover {
+        cursor: pointer;
+    }
+
+
 }
-
-
-
-.gallery {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    align-items: center;
-    overflow-x: hidden;
-    overflow-y:hidden;
-    height: 100%;
-
-
-}
-
-.slider {
-    /* slider */
-    --slider-index: 1;
-    margin-top: 1rem;
-    height: 100%;
-    max-height: 100vh;
-    width: calc(100% - 2 * var(--slider-padding));
-    display: flex;
-    padding: 0;
-    flex-wrap: nowrap;
-    transform: translateX(calc(var(--slider-index) * -100%));
-    transition: 30000ms;
-    transition-delay: 150ms;
-}
-
-.slider>img {
-    width: auto;
-    height: 100%;
-    padding: 0;
-    flex: 0, 0, 50%;
-    max-width: 75%;
-    transition: transform .5s;
-    min-width: 260px;
-}
-
-.handle {
-    margin-top: 1rem;
-    height: 25%;
-    width: var(--slider-padding);
-    background-color: rgba(236, 235, 240, 0.5);
-    z-index: 10;
-    border: none;
-    border-radius: 4px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    transition: 100ms ease-in-out;
-    font-size: 3rem;
-
-}
-
-
-
-.handle:hover,
-.handle:focus {
-    cursor: pointer;
-    background-color: rgba(236, 235, 240, 0.7);
-    font-size: 3rem;
-}
-
-.dropdown:hover .albums-content {
-    display: none;
-}
-
-.footer {
-    width: 95vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 2rem;
-    margin-top: 8rem;
-
-}
-
-/* trying to create hamburger for small screens */
-
-.header-right {
-
-    font-size: 1.75rem;
-    padding: 0;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 400px;
-    
-    
-
-}
-
-.header {
-
-    padding-right: 0px;
-    
-}
-
-.header-right ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    z-index: 998;
-    margin-top: 35rem;
-    background-color: rgba(236,235,240, 0.7);
-    border-radius: 4px;
-    gap: 1rem;
-    
-
-    
-
-}
-
-.header-right ul li{
-    
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    
-
-    
-
-}
-.navlarge {
-    display: none;
-    
-}
-
-.navsmall {
-    display: none;
-    opacity: 0; 
-    width: 100%;
-    margin-left: 1.5rem;
-    padding-left: 2rem;
-    margin-bottom: 5rem;
-    transition: opacity 5000ms ease-in-out;
-    
-}
-
-.hamburger {
-    display:block;
-    position: absolute;
-    z-index: 999;
-}
-
-.hamburger:hover {
-    cursor: pointer;
-}
-
-
-}
-
