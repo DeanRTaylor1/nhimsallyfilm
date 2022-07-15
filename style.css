@@ -236,7 +236,7 @@ body {
     max-width: 825px;
 }
 
-.albumname {
+.album-name {
     display: flex;
     flex-direction: column;
     gap: 1rem;
