@@ -40,13 +40,20 @@ const MainSwiper: React.FC = () => {
 
   return (
     <Swiper
+      breakpoints={{
+        // when window width is >= 640px
+        768: {
+          width: 768,
+          slidesPerView: 3,
+        },
+      }}
       spaceBetween={5}
       loop={true}
       centeredSlides={true}
       slidesPerView={2}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
-      className="flex items-center justify-center h-2/6 md:h-1/2 w-full"
+      className="flex items-center justify-center w-full h-1/3 md:h-2/3"
     >
       {!imageLoaded && (
         <div>
