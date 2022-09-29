@@ -17,6 +17,16 @@ module.exports = {
         // Complex site-specific row configuration
         layout: "4rem 1fr 3rem",
       },
+      height: {
+        // Complex site-specific row configuration
+        image: "416px",
+        imagelg: "521px",
+      },
+      minWidth: {
+        // Complex site-specific row configuration
+        image: "416px",
+        imagelg: "288px",
+      },
     },
   },
   plugins: [],
