@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer components {
   .example {
     @apply rounded w-full h-8 placeholder:text-sm placeholder:text-zinc-700 active:text-zinc-900 
