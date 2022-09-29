@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./NavBar";
+import Navbar from "./Components/NavBar";
 
 const Home: React.FC = () => {
   return (
