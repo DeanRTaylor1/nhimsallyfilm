@@ -16,7 +16,7 @@
   }
   .navbarDropdownList {
     @apply fixed w-screen h-screen top-0 left-0 p-2 bg-white flex items-start justify-center
-    transition-all duration-300 scale-0 origin-top-right group-hover:scale-100;
+    transition-all duration-300 scale-0 origin-top-right group-hover:scale-100 z-40;
   }
   .navbarDropdownListItem {
     @apply text-lg hover:cursor-pointer hover:bg-slate-50;
