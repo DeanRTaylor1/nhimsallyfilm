@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,5 +8,8 @@
   .example {
     @apply rounded w-full h-8 placeholder:text-sm placeholder:text-zinc-700 active:text-zinc-900 
     focus:text-zinc-900  focus:border-white  focus:ring-white active:border-white bg-zinc-200 font-extralight placeholder:font-extralight;
+  }
+  .hamburger {
+    @apply text-2xl hover:cursor-pointer hover:rotate-90 transition-all ease-in-out duration-500;
   }
 }
