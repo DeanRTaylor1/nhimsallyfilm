@@ -10,6 +10,15 @@
     focus:text-zinc-900  focus:border-white  focus:ring-white active:border-white bg-zinc-200 font-extralight placeholder:font-extralight;
   }
   .hamburger {
-    @apply text-2xl hover:cursor-pointer hover:rotate-90 transition-all ease-in-out duration-500;
+    @apply text-2xl hover:cursor-pointer hover:rotate-90 transition-all ease-in-out duration-500
+    
+    md:hidden;
+  }
+  .navbarDropdownList {
+    @apply fixed w-screen h-screen top-0 left-0 p-2 bg-white flex items-start justify-center
+    transition-all duration-300 scale-0 origin-top-right group-hover:scale-100;
+  }
+  .navbarDropdownListItem {
+    @apply text-lg hover:cursor-pointer hover:bg-slate-50;
   }
 }
