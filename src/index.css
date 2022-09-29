@@ -24,4 +24,7 @@
   .navbarStandardListItem {
     @apply text-lg hover:cursor-pointer hover:bg-slate-50;
   }
+  .swiperImage {
+    @apply rounded-md h-auto max-h-full w-auto;
+  }
 }

@@ -4,7 +4,7 @@ import { IconContext } from "react-icons";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="flex justify-between items-center p-2">
+    <div className="flex justify-between items-center p-2 md:w-4/6">
       <div className="font-medium text-2xl z-10 hover:cursor-pointer">
         NhimSally
       </div>
