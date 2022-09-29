@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "./Components/NavBar";
-import MainSwiper from "./Components/swiper";
 
 const Home: React.FC = () => {
   return (
