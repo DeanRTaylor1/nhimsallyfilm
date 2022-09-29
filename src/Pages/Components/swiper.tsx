@@ -53,7 +53,7 @@ const MainSwiper: React.FC = () => {
       slidesPerView={2}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
-      className="flex items-center justify-center w-full h-1/3 md:h-2/3"
+      className="flex items-center justify-center w-full h-1/3 md:h-11/12"
     >
       {!imageLoaded && (
         <div>
@@ -71,12 +71,15 @@ const MainSwiper: React.FC = () => {
       {imageLoaded &&
         images.map((item) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={item.id} className="group">
               <img
-                className="swiperImage "
+                className="swiperImage group-hover:opacity-70 hover:cursor-pointer"
                 alt="galleryimage"
                 src={item.imageurl}
-              ></img>
+              />
+              <div className="text-zinc-900 text-2xl origin-center group-hover:scale-100 absolute scale-0 top-0 left-0 flex items-center justify-center w-64 md:w-full h-full cursor-pointer">
+                {item.imagename}
+              </div>
             </SwiperSlide>
           );
         })}
