@@ -25,6 +25,6 @@
     @apply text-lg hover:cursor-pointer hover:bg-slate-50;
   }
   .swiperImage {
-    @apply rounded-md h-auto max-h-full w-auto;
+    @apply rounded-md h-auto max-h-full w-auto flex items-center justify-center  ml-2;
   }
 }
