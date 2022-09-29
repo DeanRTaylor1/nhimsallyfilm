@@ -46,7 +46,7 @@ const MainSwiper: React.FC = () => {
       slidesPerView={2}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
-      className="flex items-center justify-center h-4/6 md:h-1/2 w-full"
+      className="flex items-center justify-center h-2/6 md:h-1/2 w-full"
     >
       {!imageLoaded && (
         <div>
