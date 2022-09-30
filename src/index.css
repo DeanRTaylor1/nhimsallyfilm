@@ -24,10 +24,10 @@
   .navbarStandardListItem {
     @apply text-lg hover:cursor-pointer hover:bg-slate-50;
   }
-  .swiperImage {
+  /* .swiperImage {
     @apply rounded-md h-image  
     max-h-full flex items-center justify-center  ml-2;
-  }
+  } */
   .smIcons {
     @apply rounded-md h-image  
     text-xl hover:cursor-pointer hover:opacity-70 text-zinc-900;
