@@ -77,7 +77,7 @@ const MainSwiper: React.FC = () => {
                 alt="galleryimage"
                 src={item.imageurl}
               />
-              <div className="text-zinc-900 text-2xl origin-center group-hover:scale-100 absolute scale-0 top-0 left-0 flex items-center justify-center w-64 md:w-full h-full cursor-pointer">
+              <div className="text-zinc-900 text-2xl origin-center md:group-hover:scale-100 absolute scale-0 top-0 left-0 flex items-center justify-center w-64 md:w-full h-full cursor-pointer">
                 {item.imagename}
               </div>
             </SwiperSlide>
