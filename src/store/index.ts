@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import imageSlice, { ImageProps } from "./image-slice";
+import imageSlice from "./image-slice";
 
 export interface RootState {
   image: {

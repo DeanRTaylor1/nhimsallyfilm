@@ -55,7 +55,7 @@ const Galleries: React.FC = () => {
         {imageLoaded &&
           images.map((item) => {
             return (
-              <Link to="/Galleries/personal1">
+              <Link to="/Galleries/GalleryView">
                 <img
                   key={item.id}
                   className="hover:cursor-pointer"
