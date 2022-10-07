@@ -1,13 +1,16 @@
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IconContext } from "react-icons";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   return (
     <div className="flex justify-between items-center p-2 md:w-4/6">
-      <div className="font-medium text-2xl z-50 hover:cursor-pointer">
-        NhimSally
-      </div>
+      <Link to="/">
+        <div className="font-medium text-2xl z-50 hover:cursor-pointer">
+          NhimSally
+        </div>
+      </Link>
       {/* Mobile Nav */}
       <div className="group">
         <IconContext.Provider
@@ -17,7 +20,9 @@ const Navbar: React.FC = () => {
         </IconContext.Provider>
         <div className="navbarDropdownList">
           <ul className="flex flex-col gap-4 pt-12">
-            <li className="navbarDropdownListItem">Galleries</li>
+            <Link to="/Galleries">
+              <li className="navbarDropdownListItem">Galleries</li>
+            </Link>
             <li className="navbarDropdownListItem">About Me</li>
             <li className="navbarDropdownListItem">Contact</li>
           </ul>
@@ -26,7 +31,9 @@ const Navbar: React.FC = () => {
       {/* Tablet and desktop Nav */}
       <div className="hidden md:flex">
         <ul className="flex gap-4 ">
-          <li className="navbarStandardListItem">Galleries</li>
+          <Link to="/Galleries">
+            <li className="navbarStandardListItem">Galleries</li>
+          </Link>
           <li className="navbarStandardListItem">About Me</li>
           <li className="navbarStandardListItem">Contact</li>
         </ul>
