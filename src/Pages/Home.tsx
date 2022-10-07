@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/NavBar";
-import MainSwiper from "./Components/swiper";
+import MainSwiper from "./Components/swiperHome/swiper";
 import SwiperLarge from "./Components/SwiperPortrait/Swiper2";
 
 const Home: React.FC = () => {

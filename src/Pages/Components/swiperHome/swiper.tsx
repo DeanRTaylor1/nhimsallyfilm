@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../firebase/firebase";
+import { db } from "../../../firebase/firebase";
 
 // Import Swiper styles
 import "swiper/css";
-import Spinner from "./spinner/spinner";
+import Spinner from "../spinner/spinner";
 
 const MainSwiper: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
