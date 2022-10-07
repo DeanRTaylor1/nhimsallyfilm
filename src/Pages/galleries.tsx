@@ -55,6 +55,7 @@ const Galleries: React.FC = () => {
         {imageLoaded &&
           images.map((item) => {
             return (
+              // add use dispatch on click for each image to update the galleryview
               <Link to="/Galleries/GalleryView">
                 <img
                   key={item.id}
@@ -65,42 +66,6 @@ const Galleries: React.FC = () => {
               </Link>
             );
           })}
-        {/* // <img
-        //   alt="Camelia"
-        //   src="https://firebasestorage.googleapis.com/v0/b/nhimsallyfilm.appspot.com/o/galleriespage%2F000044%20copy.jpg?alt=media&token=91250084-31f9-4ac6-858b-2daf70787ee2"
-        // ></img>
-        // <img
-        //   alt="Camelia"
-        //   src="https://firebasestorage.googleapis.com/v0/b/nhimsallyfilm.appspot.com/o/galleriespage%2F000044%20copy.jpg?alt=media&token=91250084-31f9-4ac6-858b-2daf70787ee2"
-        // ></img>
-        // <img
-        //   alt="Camelia"
-        //   src="https://firebasestorage.googleapis.com/v0/b/nhimsallyfilm.appspot.com/o/galleriespage%2F000044%20copy.jpg?alt=media&token=91250084-31f9-4ac6-858b-2daf70787ee2"
-        // ></img>
-        // <img
-        //   alt="Camelia"
-        //   src="https://firebasestorage.googleapis.com/v0/b/nhimsallyfilm.appspot.com/o/galleriespage%2F000044%20copy.jpg?alt=media&token=91250084-31f9-4ac6-858b-2daf70787ee2"
-        // ></img>
-        // <img
-        //   alt="Camelia"
-        //   src="https://firebasestorage.googleapis.com/v0/b/nhimsallyfilm.appspot.com/o/galleriespage%2F000044%20copy.jpg?alt=media&token=91250084-31f9-4ac6-858b-2daf70787ee2"
-        // ></img>
-        // <img
-        //   alt="Camelia"
-        //   src="https://firebasestorage.googleapis.com/v0/b/nhimsallyfilm.appspot.com/o/galleriespage%2F000044%20copy.jpg?alt=media&token=91250084-31f9-4ac6-858b-2daf70787ee2"
-        // ></img>
-        // <img
-        //   alt="Camelia"
-        //   src="https://firebasestorage.googleapis.com/v0/b/nhimsallyfilm.appspot.com/o/galleriespage%2F000044%20copy.jpg?alt=media&token=91250084-31f9-4ac6-858b-2daf70787ee2"
-        // ></img>
-        // <img
-        //   alt="Camelia"
-        //   src="https://firebasestorage.googleapis.com/v0/b/nhimsallyfilm.appspot.com/o/galleriespage%2F000044%20copy.jpg?alt=media&token=91250084-31f9-4ac6-858b-2daf70787ee2"
-        // ></img>
-        // <img
-        //   alt="Camelia"
-        //   src="https://firebasestorage.googleapis.com/v0/b/nhimsallyfilm.appspot.com/o/galleriespage%2F000044%20copy.jpg?alt=media&token=91250084-31f9-4ac6-858b-2daf70787ee2"
-        // ></img> */}
       </div>
       <Footer />
     </div>
