@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+
+import { Link } from "react-router-dom";
+
 import { collection, getDocs, query, limit } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 
@@ -52,12 +55,14 @@ const Galleries: React.FC = () => {
         {imageLoaded &&
           images.map((item) => {
             return (
-              <img
-                key={item.id}
-                className="hover:cursor-pointer"
-                alt="galleryimage"
-                src={item.imageurl}
-              />
+              <Link to="/Galleries/personal1">
+                <img
+                  key={item.id}
+                  className="hover:cursor-pointer"
+                  alt="galleryimage"
+                  src={item.imageurl}
+                />
+              </Link>
             );
           })}
         {/* // <img
