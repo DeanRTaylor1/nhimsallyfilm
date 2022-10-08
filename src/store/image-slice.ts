@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export interface ImageProps {
-  name: string;
+  imagename: string;
 }
 
 const initialImageState: ImageProps = {
-  name: "personal1",
+  imagename: "personal1",
 };
 
 const imageSlice = createSlice({
@@ -13,11 +13,11 @@ const imageSlice = createSlice({
   initialState: initialImageState,
   reducers: {
     setCurrentImage(state, action) {
-      state.name = action.payload.imageName;
+      state.imagename = action.payload.imagename;
     },
   },
 });
 
-export const userActions = imageSlice.actions;
+export const imageActions = imageSlice.actions;
 
 export default imageSlice;

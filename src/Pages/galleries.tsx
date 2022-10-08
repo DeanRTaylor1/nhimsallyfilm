@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 
+//redux
+import { useSelector, useDispatch } from "react-redux";
+import { imageActions } from "../store/image-slice";
+
 import { Link } from "react-router-dom";
 
 import { collection, getDocs, query, limit } from "firebase/firestore";
@@ -12,6 +16,10 @@ import Spinner from "./Components/spinner/spinner";
 const Galleries: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   const [images, setImages] = useState<any[]>([]);
+
+  //redux
+  const dispatch = useDispatch();
+  const currentImage = useSelector((state: any) => state.image.imagename);
 
   const getGalleryImages = async () => {
     try {
@@ -42,6 +50,16 @@ const Galleries: React.FC = () => {
     getGalleryImages();
   }, []);
 
+  const updateStore = (event: React.MouseEvent<HTMLImageElement>) => {
+    console.log(currentImage);
+    const imagename = event.currentTarget.dataset.imagename!.toString();
+    dispatch(
+      imageActions.setCurrentImage({
+        imagename: imagename,
+      })
+    );
+  };
+
   return (
     <div className="grid overflow-hidden h-screen w-screen grid-cols-1 grid-rows-layout md:justify-items-center">
       <Navbar />
@@ -58,8 +76,10 @@ const Galleries: React.FC = () => {
               // add use dispatch on click for each image to update the galleryview
               <Link to="/Galleries/GalleryView">
                 <img
+                  onMouseOver={(event) => updateStore(event)}
                   key={item.id}
                   className="hover:cursor-pointer"
+                  data-imagename={item.imagename}
                   alt="galleryimage"
                   src={item.imageurl}
                 />

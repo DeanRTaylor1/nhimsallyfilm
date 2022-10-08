@@ -4,7 +4,7 @@ import imageSlice from "./image-slice";
 
 export interface RootState {
   image: {
-    name: string;
+    imagename: string;
   };
 }
 
