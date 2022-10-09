@@ -12,13 +12,14 @@ import Navbar from "./Components/NavBar";
 import Footer from "./Components/Footer";
 import Spinner from "./Components/spinner/spinner";
 
-const Galleries: React.FC = () => {
-  const currentImage = useSelector((state: any) => state.image.name);
+const IndividualGallery: React.FC = () => {
+  const currentImage = useSelector((state: any) => state.image.imagename);
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   const [images, setImages] = useState<any[]>([]);
 
   const getGalleryImages = async () => {
     try {
+      console.log(currentImage);
       const images = collection(db, currentImage);
       const imageQuery = query(images, limit(9));
       const imagesSnap = await getDocs(imageQuery);
@@ -59,14 +60,12 @@ const Galleries: React.FC = () => {
         {imageLoaded &&
           images.map((item) => {
             return (
-              <Link to="/Galleries/personal1">
-                <img
-                  key={item.id}
-                  className="hover:cursor-pointer"
-                  alt="galleryimage"
-                  src={item.imageurl}
-                />
-              </Link>
+              <img
+                key={item.id}
+                className="hover:cursor-pointer"
+                alt="galleryimage"
+                src={item.imageurl}
+              />
             );
           })}
       </div>
@@ -75,4 +74,4 @@ const Galleries: React.FC = () => {
   );
 };
 
-export default Galleries;
+export default IndividualGallery;

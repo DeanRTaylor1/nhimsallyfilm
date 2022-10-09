@@ -8,6 +8,7 @@ import Galleries from "./Pages/galleries";
 
 //styles
 import "./index.css";
+import IndividualGallery from "./Pages/IndividualGallery";
 
 function App() {
   return (
@@ -16,7 +17,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Galleries" element={<Galleries />} />
-        <Route path={`/Galleries/GalleryView`} element={<Galleries />} />
+        <Route
+          path={`/Galleries/GalleryView`}
+          element={<IndividualGallery />}
+        />
         {/*<Route path={`/Profile/${userID}`} element={<UserProfile />} /> */}
       </Routes>
     </BrowserRouter>
