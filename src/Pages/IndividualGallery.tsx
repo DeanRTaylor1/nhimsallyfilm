@@ -43,6 +43,7 @@ const IndividualGallery: React.FC = () => {
 
   useEffect(() => {
     getGalleryImages();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
