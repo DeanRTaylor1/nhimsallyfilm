@@ -51,8 +51,8 @@ const MainSwiper: React.FC = () => {
       loop={true}
       centeredSlides={true}
       slidesPerView={2}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log("slide change")}
+      // onSwiper={(swiper) => console.log(swiper)}
       className="flex items-center justify-center w-full h-1/3 md:h-11/12"
     >
       {!imageLoaded && (
