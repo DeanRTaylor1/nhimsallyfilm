@@ -5,10 +5,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 //Pages
 import Home from "./Pages/Home";
 import Galleries from "./Pages/galleries";
+import BookingPage from "./Pages/BookingPage";
+import IndividualGallery from "./Pages/IndividualGallery";
 
 //styles
 import "./index.css";
-import IndividualGallery from "./Pages/IndividualGallery";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           path={`/Galleries/GalleryView`}
           element={<IndividualGallery />}
         />
+        <Route path="/Booking" element={<BookingPage />} />
         {/*<Route path={`/Profile/${userID}`} element={<UserProfile />} /> */}
       </Routes>
     </BrowserRouter>

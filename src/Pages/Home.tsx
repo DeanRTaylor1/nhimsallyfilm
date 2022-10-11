@@ -4,6 +4,8 @@ import Navbar from "./Components/NavBar";
 import MainSwiper from "./Components/swiperHome/swiper";
 import SwiperLarge from "./Components/SwiperLandscape/Swiper2";
 
+import { Link } from "react-router-dom";
+
 const Home: React.FC = () => {
   return (
     <div className="grid overflow-hidden h-screen w-screen grid-cols-1 grid-rows-layout md:justify-items-center">
@@ -12,12 +14,16 @@ const Home: React.FC = () => {
         <MainSwiper />
         <div className="flex w-full items-center justify-center">
           <div className="flex items-center justify-center gap-8 p-4 w-11/12 rounded-sm border-zinc-900 border-opacity-60">
-            <div className="text-xl h-fit p-2 rounded-sm text-zinc-900 font-extralight hover:cursor-pointer hover:bg-slate-50">
-              View Galleries
-            </div>
-            <div className="text-xl h-fit p-2 rounded-sm text-zinc-900 font-extralight hover:cursor-pointer hover:bg-slate-50">
-              Make A Booking
-            </div>
+            <Link to="/Galleries">
+              <div className="text-xl h-fit p-2 rounded-sm text-zinc-900 font-extralight hover:cursor-pointer hover:bg-slate-50">
+                View Galleries
+              </div>
+            </Link>
+            <Link to="/Booking">
+              <div className="text-xl h-fit p-2 rounded-sm text-zinc-900 font-extralight hover:cursor-pointer hover:bg-slate-50">
+                Make A Booking
+              </div>
+            </Link>
           </div>
         </div>
         <SwiperLarge />
