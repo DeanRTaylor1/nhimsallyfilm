@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { collection, getDocs, query, limit } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../../firebase/firebase";
 
 //import swiper modules
-import { Pagination } from "swiper";
+import { Navigation, Pagination } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
 import "./packageSwiper.css";
 import Spinner from "../spinner/spinner";
+import "swiper/css/navigation";
 
 interface PackageSwiperProps {
   packageName: String;
@@ -24,7 +25,10 @@ const PackageSwiper: React.FC<PackageSwiperProps> = (props) => {
   const getGalleryImages = async () => {
     try {
       const images = collection(db, "packages");
-      const imageQuery = query(images, limit(9));
+      const imageQuery = query(
+        images,
+        where("group", "==", packageName.toString())
+      );
       const imagesSnap = await getDocs(imageQuery);
 
       let newArr: any[] = [];
@@ -48,6 +52,7 @@ const PackageSwiper: React.FC<PackageSwiperProps> = (props) => {
 
   useEffect(() => {
     getGalleryImages();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -55,7 +60,7 @@ const PackageSwiper: React.FC<PackageSwiperProps> = (props) => {
       pagination={{
         dynamicBullets: true,
       }}
-      modules={[Pagination]}
+      modules={[Pagination, Navigation]}
       breakpoints={{
         // when window width is >= 640px
         1400: {
@@ -64,6 +69,7 @@ const PackageSwiper: React.FC<PackageSwiperProps> = (props) => {
         },
       }}
       spaceBetween={5}
+      navigation
       loop={true}
       centeredSlides={true}
       slidesPerView={1}
