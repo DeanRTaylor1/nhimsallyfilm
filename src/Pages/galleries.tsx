@@ -64,14 +64,10 @@ const Galleries: React.FC = () => {
     <div className="grid overflow-hidden h-screen w-screen grid-cols-1 grid-rows-layout md:justify-items-center">
       <Navbar />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-4 justify-items-center items-center p-4 md:w-4/6 overflow-auto">
-        {!imageLoaded && (
-          <div>
-            <Spinner />
-          </div>
-        )}
-        {imageLoaded &&
-          images.map((item) => {
+      {!imageLoaded && <Spinner />}
+      {imageLoaded && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-4 justify-items-center items-center p-4 md:w-4/6 overflow-auto">
+          {images.map((item) => {
             return (
               // add use dispatch on click for each image to update the galleryview
               <Link to="/Galleries/GalleryView">
@@ -86,7 +82,9 @@ const Galleries: React.FC = () => {
               </Link>
             );
           })}
-      </div>
+        </div>
+      )}
+
       <Footer />
     </div>
   );

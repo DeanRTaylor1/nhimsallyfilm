@@ -15,7 +15,7 @@
     md:hidden;
   }
   .navbarDropdownList {
-    @apply fixed w-screen h-screen top-0 left-0 p-2 bg-white flex items-start justify-center
+    @apply fixed w-screen h-screen top-0 left-0 p-2 bg-white flex text-center items-start justify-center
     transition-all duration-300 scale-0 origin-top-right group-hover:scale-100 z-40;
   }
   .navbarDropdownListItem {

@@ -50,15 +50,12 @@ const IndividualGallery: React.FC = () => {
     <div className="grid overflow-hidden h-screen w-screen grid-cols-1 grid-rows-layout md:justify-items-center">
       <Navbar />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-4 justify-items-center items-center p-4 md:w-4/6 overflow-auto">
-        {!imageLoaded && (
-          <div>
-            <Spinner />
-          </div>
-        )}
-        {imageLoaded &&
-          images.map((item) => {
+      {!imageLoaded && <Spinner />}
+      {imageLoaded && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-4 justify-items-center items-center p-4 md:w-4/6 overflow-auto">
+          {images.map((item) => {
             return (
+              // add use dispatch on click for each image to update the galleryview
               <img
                 key={item.id}
                 className="hover:cursor-pointer"
@@ -67,7 +64,8 @@ const IndividualGallery: React.FC = () => {
               />
             );
           })}
-      </div>
+        </div>
+      )}
       <Footer />
     </div>
   );
