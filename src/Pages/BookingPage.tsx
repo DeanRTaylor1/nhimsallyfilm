@@ -10,7 +10,7 @@ const BookingPage: React.FC = () => {
     <div className="grid overflow-hidden h-screen w-screen grid-cols-1 grid-rows-layout md:justify-items-center">
       <Navbar />
       <div className="w-full h-auto flex justify-center overflow-y-scroll ">
-        <div className="h-fit w-96 md:h-max md:w-2/4 p-4 flex flex-col justify-center items-center gap-4">
+        <div className="h-fit w-96 md:h-max md:w-2/4 p-4 flex flex-col justify-center items-center gap-8">
           <div>Personal:</div>
           <PackageSwiper packageName="individual" />
           <div>Couples:</div>
