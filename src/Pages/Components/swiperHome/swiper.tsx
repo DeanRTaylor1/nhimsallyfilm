@@ -3,6 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../firebase/firebase";
 
+//import swiper modules
+import { Pagination } from "swiper";
+
 // Import Swiper styles
 import "swiper/css";
 import Spinner from "../spinner/spinner";
@@ -40,6 +43,10 @@ const MainSwiper: React.FC = () => {
 
   return (
     <Swiper
+      pagination={{
+        dynamicBullets: true,
+      }}
+      modules={[Pagination]}
       breakpoints={{
         // when window width is >= 640px
         768: {
