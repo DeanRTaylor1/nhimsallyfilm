@@ -58,9 +58,9 @@ const PackageSwiper: React.FC<PackageSwiperProps> = (props) => {
       modules={[Pagination]}
       breakpoints={{
         // when window width is >= 640px
-        768: {
+        1400: {
           width: 768,
-          slidesPerView: 3,
+          slidesPerView: 1,
         },
       }}
       spaceBetween={5}
@@ -69,7 +69,6 @@ const PackageSwiper: React.FC<PackageSwiperProps> = (props) => {
       slidesPerView={1}
       // onSlideChange={() => console.log("slide change")}
       // onSwiper={(swiper) => console.log(swiper)}
-      className="  overflow-y-scroll"
     >
       {!imageLoaded && (
         <SwiperSlide>
@@ -88,7 +87,7 @@ const PackageSwiper: React.FC<PackageSwiperProps> = (props) => {
             return (
               // add use dispatch on click for each image to update the galleryview
 
-              <SwiperSlide key={item.id} className="group">
+              <SwiperSlide key={item.id} className="group h-96">
                 <img
                   className="group-hover:opacity-70 hover:cursor-pointer"
                   alt="galleryimage"
