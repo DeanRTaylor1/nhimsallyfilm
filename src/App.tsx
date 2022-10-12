@@ -10,6 +10,7 @@ import IndividualGallery from "./Pages/IndividualGallery";
 
 //styles
 import "./index.css";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           element={<IndividualGallery />}
         />
         <Route path="/Booking" element={<BookingPage />} />
+        <Route path="/Contact" element={<Contact />} />
         {/*<Route path={`/Profile/${userID}`} element={<UserProfile />} /> */}
       </Routes>
     </BrowserRouter>

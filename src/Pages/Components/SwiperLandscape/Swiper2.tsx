@@ -5,15 +5,13 @@ import { db } from "../../../firebase/firebase";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
+import "swiper/css/navigation";
 import "./styles.css";
-
-// import required modules
-import { Pagination } from "swiper";
 
 export default function SwiperLarge() {
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
@@ -53,7 +51,8 @@ export default function SwiperLarge() {
           dynamicBullets: true,
         }}
         loop={true}
-        modules={[Pagination]}
+        modules={[Pagination, Navigation]}
+        navigation
         className="mySwiper"
       >
         {!imageLoaded && (

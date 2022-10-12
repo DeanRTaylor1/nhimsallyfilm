@@ -32,4 +32,8 @@
     @apply rounded-md h-image  
     text-xl hover:cursor-pointer hover:opacity-70 text-zinc-900;
   }
+  .contactlinks {
+    @apply rounded-md 
+    text-4xl underline underline-offset-8 tracking-wider hover:cursor-pointer hover:bg-slate-50 text-zinc-900;
+  }
 }

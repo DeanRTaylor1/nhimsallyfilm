@@ -26,7 +26,9 @@ const Navbar: React.FC = () => {
             <Link to="/Booking">
               <li className="navbarDropdownListItem">Make A Booking</li>
             </Link>
-            <li className="navbarDropdownListItem">Contact</li>
+            <Link to="/Contact">
+              <li className="navbarDropdownListItem">Contact</li>
+            </Link>
           </ul>
         </div>
       </div>
@@ -39,7 +41,9 @@ const Navbar: React.FC = () => {
           <Link to="/Booking">
             <li className="navbarStandardListItem">Make A Booking</li>
           </Link>
-          <li className="navbarStandardListItem">Contact</li>
+          <Link to="/Contact">
+            <li className="navbarStandardListItem">Contact</li>
+          </Link>
         </ul>
       </div>
     </div>

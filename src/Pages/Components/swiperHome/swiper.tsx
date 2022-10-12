@@ -4,11 +4,12 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../firebase/firebase";
 
 //import swiper modules
-import { Pagination } from "swiper";
+import { Navigation, Pagination } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
 import Spinner from "../spinner/spinner";
+import "swiper/css/navigation";
 
 const MainSwiper: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
@@ -46,7 +47,7 @@ const MainSwiper: React.FC = () => {
       pagination={{
         dynamicBullets: true,
       }}
-      modules={[Pagination]}
+      modules={[Pagination, Navigation]}
       breakpoints={{
         // when window width is >= 640px
         768: {
@@ -55,6 +56,7 @@ const MainSwiper: React.FC = () => {
         },
       }}
       spaceBetween={5}
+      navigation
       loop={true}
       centeredSlides={true}
       slidesPerView={2}
