@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="mailto: duongthu179@gmail.com"
+            href="mailto: nhimsally179@gmail.com"
           >
             Email
           </a>
