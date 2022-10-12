@@ -73,6 +73,7 @@ const PackageSwiper: React.FC<PackageSwiperProps> = (props) => {
       loop={true}
       centeredSlides={true}
       slidesPerView={1}
+
       // onSlideChange={() => console.log("slide change")}
       // onSwiper={(swiper) => console.log(swiper)}
     >
@@ -93,9 +94,9 @@ const PackageSwiper: React.FC<PackageSwiperProps> = (props) => {
             return (
               // add use dispatch on click for each image to update the galleryview
 
-              <SwiperSlide key={item.id} className="group h-96">
+              <SwiperSlide key={item.id} className="group h-96 ">
                 <img
-                  className="group-hover:opacity-70 hover:cursor-pointer"
+                  className="group-hover:opacity-70 hover:cursor-pointer "
                   alt="galleryimage"
                   src={item.imageurl}
                 />

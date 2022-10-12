@@ -10,3 +10,15 @@
 .swiper-pagination-bullet-active {
   background-color: black !important;
 }
+
+@media only screen and (min-width: 1800px) {
+  .swiper-wrapper {
+    left: 80px;
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .swiper-wrapper {
+    left: 180px;
+  }
+}
